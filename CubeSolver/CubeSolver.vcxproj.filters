@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="cube_printer.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="variables.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="edge_finder.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="kernel.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="notation_translator.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_corner_rotations.cu">
+      <Filter>Source Files\F2LCorner</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_rotations.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_sequence_executor.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_sequences.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_solver.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cube_rotations.cu">
+      <Filter>Source Files\Cube</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cube_solver.cu">
+      <Filter>Source Files\Cube</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_corner_sequences.cu">
+      <Filter>Source Files\F2LCorner</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_corner_sequence_executor.cu">
+      <Filter>Source Files\F2LCorner</Filter>
+    </CudaCompile>
+    <CudaCompile Include="corner_finder.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="corner_sequence_finder.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_corner_solver.cu">
+      <Filter>Source Files\F2LCorner</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_seqence_executor.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_rotations.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_solver.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_sequences.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_sequence_finder.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_sequence_finder.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_corner_references.cu">
+      <Filter>Source Files\F2LCorner</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cross_references.cu">
+      <Filter>Source Files\Cross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="error_printer.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_cross_references.cu">
+      <Filter>Source Files\OLLCross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_cross_sequence_executor.cu">
+      <Filter>Source Files\OLLCross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_cross_sequence_finder.cu">
+      <Filter>Source Files\OLLCross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_cross_sequences.cu">
+      <Filter>Source Files\OLLCross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_cross_solver.cu">
+      <Filter>Source Files\OLLCross</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_edge_references.cu">
+      <Filter>Source Files\OLLEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_edge_sequence_executor.cu">
+      <Filter>Source Files\OLLEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_edge_sequence_finder.cu">
+      <Filter>Source Files\OLLEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_edge_sequences.cu">
+      <Filter>Source Files\OLLEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="oll_edge_solver.cu">
+      <Filter>Source Files\OLLEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="f2l_edge_references.cu">
+      <Filter>Source Files\F2LEdge</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_cycle_references.cu">
+      <Filter>Source Files\PLLCycle</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_cycle_sequences.cu">
+      <Filter>Source Files\PLLCycle</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_cycle_sequence_finder.cu">
+      <Filter>Source Files\PLLCycle</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_cycle_sequence_executor.cu">
+      <Filter>Source Files\PLLCycle</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_cycle_solver.cu">
+      <Filter>Source Files\PLLCycle</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_orient_references.cu">
+      <Filter>Source Files\PLLOrient</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_orient_sequence.cu">
+      <Filter>Source Files\PLLOrient</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_orient_sequence_executor.cu">
+      <Filter>Source Files\PLLOrient</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pll_orient_solver.cu">
+      <Filter>Source Files\PLLOrient</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sequence_processor.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="test_rotations.cu">
+      <Filter>Source Files\TestRotations</Filter>
+    </CudaCompile>
+    <CudaCompile Include="solve_rotation_finder.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cube_printer.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="variables.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_finder.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="notation_translator.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cube_rotations.cuh">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="cube_solver.cuh">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_rotations.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_sequence_executor.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_sequences.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_solver.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_corner_sequences.cuh">
+      <Filter>Header Files\F2LCorner</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_corner_rotations.cuh">
+      <Filter>Header Files\F2LCorner</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_corner_sequence_executor.cuh">
+      <Filter>Header Files\F2LCorner</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_corner_solver.cuh">
+      <Filter>Header Files\F2LCorner</Filter>
+    </ClInclude>
+    <ClInclude Include="corner_finder.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="corner_sequence_finder.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_rotations.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_sequence_executor.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_solver.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_sequences.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_sequence_finder.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_sequence_finder.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="cross_references.cuh">
+      <Filter>Header Files\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_corner_references.cuh">
+      <Filter>Header Files\F2LCorner</Filter>
+    </ClInclude>
+    <ClInclude Include="f2l_edge_references.cuh">
+      <Filter>Header Files\F2LEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="error_printer.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ms_clock.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_cross_references.cuh">
+      <Filter>Header Files\OLLCross</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_cross_sequence_executor.cuh">
+      <Filter>Header Files\OLLCross</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_cross_sequence_finder.cuh">
+      <Filter>Header Files\OLLCross</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_cross_sequences.cuh">
+      <Filter>Header Files\OLLCross</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_cross_solver.cuh">
+      <Filter>Header Files\OLLCross</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_edge_references.cuh">
+      <Filter>Header Files\OLLEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_edge_sequence_executor.cuh">
+      <Filter>Header Files\OLLEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_edge_sequences.cuh">
+      <Filter>Header Files\OLLEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_edge_sequence_finder.cuh">
+      <Filter>Header Files\OLLEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="oll_edge_solver.cuh">
+      <Filter>Header Files\OLLEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_cycle_references.cuh">
+      <Filter>Header Files\PLLCycle</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_cycle_sequences.cuh">
+      <Filter>Header Files\PLLCycle</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_cycle_sequence_finder.cuh">
+      <Filter>Header Files\PLLCycle</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_cycle_sequence_executor.cuh">
+      <Filter>Header Files\PLLCycle</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_cycle_solver.cuh">
+      <Filter>Header Files\PLLCycle</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_orient_references.cuh">
+      <Filter>Header Files\PLLOrient</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_orient_sequence.cuh">
+      <Filter>Header Files\PLLOrient</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_orient_sequence_executor.cuh">
+      <Filter>Header Files\PLLOrient</Filter>
+    </ClInclude>
+    <ClInclude Include="pll_orient_solver.cuh">
+      <Filter>Header Files\PLLOrient</Filter>
+    </ClInclude>
+    <ClInclude Include="sequence_processor.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_rotations.cuh">
+      <Filter>Header Files\TestRotations</Filter>
+    </ClInclude>
+    <ClInclude Include="solve_rotation_finder.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{09329505-f0a0-4805-99de-f330e0d20164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b88b47b9-09e1-45fb-9ae1-0302236bc052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cross">
+      <UniqueIdentifier>{deaec3f9-9b43-4c42-804f-e9d6766b7a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cube">
+      <UniqueIdentifier>{7d5be23d-f41d-493b-9bb6-c86409868043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cube">
+      <UniqueIdentifier>{63fa0bd9-28e7-44b5-81e3-2c39ef7af56a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cross">
+      <UniqueIdentifier>{3ab3481c-9f70-491a-b2b5-08ef0bdbcbfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\F2LCorner">
+      <UniqueIdentifier>{991f809c-09b1-4008-8292-13d985a14a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\F2LEdge">
+      <UniqueIdentifier>{2c79bed9-7190-48a9-9a74-8039970625f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\F2LCorner">
+      <UniqueIdentifier>{8d79855f-d2c1-464a-9d2f-78f1766f0b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\F2LEdge">
+      <UniqueIdentifier>{7ac24da7-78f6-4f22-8abb-2c2e619d3c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OLLCross">
+      <UniqueIdentifier>{a549a107-b1c1-45da-aa56-39d17c89f725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OLLEdge">
+      <UniqueIdentifier>{7827b4fd-2135-47f0-919a-6113f7c7358e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OLLCross">
+      <UniqueIdentifier>{2ce8c96e-2853-4d2f-b15a-60fb385bbd32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OLLEdge">
+      <UniqueIdentifier>{ed58ae98-59a5-44ce-9772-3dad0e218127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PLLCycle">
+      <UniqueIdentifier>{e6e29eb8-b224-4a97-8913-0b1283ae3925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PLLCycle">
+      <UniqueIdentifier>{2d542ae6-9d8f-41ef-866d-f4f83c032fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PLLOrient">
+      <UniqueIdentifier>{28bc470e-002e-4ed7-95ac-de3b8dab7c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PLLOrient">
+      <UniqueIdentifier>{6440388e-bb25-403e-a3e2-f6804df8d1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TestRotations">
+      <UniqueIdentifier>{c2a35079-a241-40f3-a177-5e563f5fc7e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TestRotations">
+      <UniqueIdentifier>{2ff4989c-07fd-4602-ba26-8923b5ccf1f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ms_clock.cu">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

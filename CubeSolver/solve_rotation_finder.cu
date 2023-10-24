@@ -1,0 +1,117 @@
+#include "solve_rotation_finder.cuh"
+
+__constant__ SolvePiece solvePieces[4] =
+{
+	{
+		{
+			{
+				1,
+				0,
+				false,
+				Direction_Right,
+				yp
+			},
+			{
+				3,
+				0,
+				false,
+				Direction_Left,
+				y
+			},
+			{
+				2,
+				0,
+				true,
+				Direction_Left,
+				y2
+			}
+		}
+	},
+	{
+		{
+			{
+				0,
+				2,
+				true,
+				Direction_Left,
+				y2
+			},
+			{
+				1,
+				2,
+				false,
+				Direction_Left,
+				y
+			},
+			{
+				3,
+				2,
+				false,
+				Direction_Right,
+				yp
+			}
+		}
+	},
+	{
+		{
+			{
+				0,
+				3,
+				false,
+				Direction_Right,
+				yp
+			},
+			{
+				1,
+				3,
+				true,
+				Direction_Left,
+				y2
+			},
+			{
+				2,
+				3,
+				false,
+				Direction_Left,
+				y
+			}
+		}
+	},
+	{
+		{
+			{
+				0,
+				1,
+				false,
+				Direction_Left,
+				y
+			},
+			{
+				3,
+				1,
+				true,
+				Direction_Right,
+				y2
+			},
+			{
+				2,
+				1,
+				false,
+				Direction_Right,
+				yp
+			}
+		}
+	}
+};
+
+__device__ const SolveRotation findSolveRotation(const int rotation, const int solveOrderIdx)
+{
+	for (int i = 0; i < 3; i++)
+	{
+		if (solvePieces[solveOrderIdx].solveRotations[i].rotation == rotation)
+		{
+			return solvePieces[solveOrderIdx].solveRotations[i];
+		}
+	}
+	return { 99 };
+}

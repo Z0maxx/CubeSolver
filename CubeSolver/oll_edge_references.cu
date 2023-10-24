@@ -1,0 +1,121 @@
+#include "oll_edge_references.cuh"
+
+__constant__ Reference const_OLLEdgeTargetReferences[4] =
+{
+	{
+		Layer_Front,
+		Cube_Top,
+		Side_Front
+	},
+	{
+		Layer_Back,
+		Cube_Top,
+		Side_Back
+	},
+	{
+		Layer_Middle,
+		Cube_Top_Left,
+		Side_Left
+	},
+	{
+		Layer_Middle,
+		Cube_Top_Right,
+		Side_Right
+	}
+};
+
+__constant__ Reference const_OLLEdgeReferences[4] =
+{
+	{
+		Layer_Front,
+		Cube_Center,
+		Side_Front
+	},
+	{
+		Layer_Back,
+		Cube_Center,
+		Side_Back
+	},
+	{
+		Layer_Middle,
+		Cube_Left,
+		Side_Left
+	},
+	{
+		Layer_Middle,
+		Cube_Right,
+		Side_Right
+	}
+};
+
+__constant__ NearReference const_OLLEdgeNearReferences[4] =
+{
+	{
+		{
+			Layer_Front,
+			Cube_Top,
+			Side_Front
+		},
+		{
+			Layer_Middle,
+			Cube_Left,
+			Side_Left
+		},
+		{
+			Layer_Middle,
+			Cube_Right,
+			Side_Right
+		}
+	},
+	{
+		{
+			Layer_Back,
+			Cube_Top,
+			Side_Back
+		},
+		{
+			Layer_Middle,
+			Cube_Right,
+			Side_Right
+		},
+		{
+			Layer_Middle,
+			Cube_Left,
+			Side_Left
+		}
+	},
+	{
+		{
+			Layer_Middle,
+			Cube_Top_Left,
+			Side_Left
+		},
+		{
+			Layer_Back,
+			Cube_Center,
+			Side_Back
+		},
+		{
+			Layer_Front,
+			Cube_Center,
+			Side_Front
+		}
+	},
+	{
+		{
+			Layer_Middle,
+			Cube_Top_Right,
+			Side_Right
+		},
+		{
+			Layer_Front,
+			Cube_Center,
+			Side_Front
+		},
+		{
+			Layer_Back,
+			Cube_Center,
+			Side_Back
+		},
+	}
+};

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{573963A9-BBE2-48F7-BA97-C9B3DE95E202}</ProjectGuid>
+    <RootNamespace>CubeSolver</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDA_PATH)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(CUDA_PATH)\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CudaCompile Include="corner_finder.cu" />
+    <CudaCompile Include="cross_references.cu" />
+    <CudaCompile Include="error_printer.cu" />
+    <CudaCompile Include="f2l_corner_references.cu" />
+    <CudaCompile Include="f2l_corner_rotations.cu" />
+    <CudaCompile Include="f2l_corner_sequences.cu" />
+    <CudaCompile Include="f2l_corner_sequence_executor.cu" />
+    <CudaCompile Include="corner_sequence_finder.cu" />
+    <CudaCompile Include="f2l_corner_solver.cu" />
+    <CudaCompile Include="cross_rotations.cu" />
+    <CudaCompile Include="cross_sequences.cu" />
+    <CudaCompile Include="cross_solver.cu" />
+    <CudaCompile Include="cube_rotations.cu" />
+    <CudaCompile Include="cube_solver.cu" />
+    <CudaCompile Include="f2l_edge_references.cu" />
+    <CudaCompile Include="f2l_edge_rotations.cu" />
+    <CudaCompile Include="f2l_edge_seqence_executor.cu" />
+    <CudaCompile Include="f2l_edge_sequences.cu" />
+    <CudaCompile Include="f2l_edge_sequence_finder.cu" />
+    <CudaCompile Include="f2l_edge_solver.cu" />
+    <CudaCompile Include="sequence_processor.cu" />
+    <CudaCompile Include="oll_cross_references.cu" />
+    <CudaCompile Include="oll_cross_sequences.cu" />
+    <CudaCompile Include="oll_cross_sequence_executor.cu" />
+    <CudaCompile Include="oll_cross_sequence_finder.cu" />
+    <CudaCompile Include="oll_cross_solver.cu" />
+    <CudaCompile Include="oll_edge_references.cu" />
+    <CudaCompile Include="oll_edge_sequences.cu" />
+    <CudaCompile Include="oll_edge_sequence_executor.cu" />
+    <CudaCompile Include="oll_edge_sequence_finder.cu" />
+    <CudaCompile Include="oll_edge_solver.cu" />
+    <CudaCompile Include="pll_cycle_sequence_executor.cu" />
+    <CudaCompile Include="pll_cycle_sequence_finder.cu" />
+    <CudaCompile Include="pll_cycle_references.cu" />
+    <CudaCompile Include="pll_cycle_sequences.cu" />
+    <CudaCompile Include="pll_cycle_solver.cu" />
+    <CudaCompile Include="pll_orient_references.cu" />
+    <CudaCompile Include="pll_orient_sequence.cu" />
+    <CudaCompile Include="pll_orient_sequence_executor.cu" />
+    <CudaCompile Include="pll_orient_solver.cu" />
+    <CudaCompile Include="solve_rotation_finder.cu" />
+    <CudaCompile Include="test_rotations.cu" />
+    <CudaCompile Include="variables.cu" />
+    <CudaCompile Include="edge_finder.cu" />
+    <CudaCompile Include="cross_sequence_finder.cu" />
+    <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="notation_translator.cu" />
+    <CudaCompile Include="cube_printer.cu" />
+    <CudaCompile Include="cross_sequence_executor.cu" />
+    <ClCompile Include="ms_clock.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="corner_finder.cuh" />
+    <ClInclude Include="cross_references.cuh" />
+    <ClInclude Include="error_printer.cuh" />
+    <ClInclude Include="f2l_corner_references.cuh" />
+    <ClInclude Include="f2l_corner_rotations.cuh" />
+    <ClInclude Include="f2l_corner_sequences.cuh" />
+    <ClInclude Include="f2l_corner_sequence_executor.cuh" />
+    <ClInclude Include="corner_sequence_finder.cuh" />
+    <ClInclude Include="f2l_corner_solver.cuh" />
+    <ClInclude Include="cross_rotations.cuh" />
+    <ClInclude Include="cross_sequences.cuh" />
+    <ClInclude Include="cross_solver.cuh" />
+    <ClInclude Include="cube_rotations.cuh" />
+    <ClInclude Include="cube_solver.cuh" />
+    <ClInclude Include="f2l_edge_references.cuh" />
+    <ClInclude Include="f2l_edge_rotations.cuh" />
+    <ClInclude Include="f2l_edge_sequences.cuh" />
+    <ClInclude Include="f2l_edge_sequence_executor.cuh" />
+    <ClInclude Include="f2l_edge_sequence_finder.cuh" />
+    <ClInclude Include="f2l_edge_solver.cuh" />
+    <ClInclude Include="sequence_processor.cuh" />
+    <ClInclude Include="ms_clock.cuh" />
+    <ClInclude Include="oll_cross_references.cuh" />
+    <ClInclude Include="oll_cross_sequences.cuh" />
+    <ClInclude Include="oll_cross_sequence_executor.cuh" />
+    <ClInclude Include="oll_cross_sequence_finder.cuh" />
+    <ClInclude Include="oll_cross_solver.cuh" />
+    <ClInclude Include="oll_edge_references.cuh" />
+    <ClInclude Include="oll_edge_sequences.cuh" />
+    <ClInclude Include="oll_edge_sequence_executor.cuh" />
+    <ClInclude Include="oll_edge_sequence_finder.cuh" />
+    <ClInclude Include="oll_edge_solver.cuh" />
+    <ClInclude Include="pll_cycle_references.cuh" />
+    <ClInclude Include="pll_cycle_sequences.cuh" />
+    <ClInclude Include="pll_cycle_sequence_executor.cuh" />
+    <ClInclude Include="pll_cycle_sequence_finder.cuh" />
+    <ClInclude Include="pll_cycle_solver.cuh" />
+    <ClInclude Include="pll_orient_references.cuh" />
+    <ClInclude Include="pll_orient_sequence.cuh" />
+    <ClInclude Include="pll_orient_sequence_executor.cuh" />
+    <ClInclude Include="pll_orient_solver.cuh" />
+    <ClInclude Include="solve_rotation_finder.cuh" />
+    <ClInclude Include="test_rotations.cuh" />
+    <ClInclude Include="variables.cuh" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="edge_finder.cuh" />
+    <ClInclude Include="cross_sequence_finder.cuh" />
+    <ClInclude Include="notation_translator.cuh" />
+    <ClInclude Include="cube_printer.cuh" />
+    <ClInclude Include="cross_sequence_executor.cuh" />
+    <ClInclude Include="structs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.2.targets" />
+  </ImportGroup>
+</Project>
